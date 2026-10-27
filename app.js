@@ -25,7 +25,7 @@
   function home() {
     const featured=data.projects.find(p=>p.type==='research');
     const engineering=data.projects.filter(p=>p.type==='work');
-    return `<section class="hero">${featured?`<a href="#case/${featured.id}" class="announcement"><span class="live-dot"></span>${e(featured.name)} · ${e(featured.venue)} <span>${e(featured.status)} ↗</span></a>`:''}
+    return `<section class="hero">
       <div class="eyebrow hero-kicker">RESEARCHER & PRODUCT ENGINEER</div><h1>${e(data.profile.title).split('\n').map((line,i)=>i?`<br><span>${line}</span>`:line).join('')}</h1>
       <p class="hero-intro">${e(data.profile.intro)}</p>
       <div class="hero-bottom"><a class="person-pill" href="#about"><img src="${e(data.profile.portrait||'assets/portrait.png')}" width="44" height="44" alt="${e(data.profile.name)}的头像"><span>关于我 <span aria-hidden="true">→</span></span></a><span class="hero-line"></span><span class="hero-note">${e(data.profile.interests.join(' · '))}</span></div>
