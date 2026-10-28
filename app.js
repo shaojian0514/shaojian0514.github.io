@@ -38,7 +38,7 @@
     </section>
     ${featured?`<section class="selected"><div class="section-title"><div><span class="eyebrow">SELECTED RESEARCH</span><h2>从问题出发，探索可靠的智能。</h2></div><a class="text-link" href="#research">全部论文 →</a></div>${project(featured,{eager:true})}</section>`:''}
     ${engineering.length?`<section class="selected"><div class="section-title"><div><span class="eyebrow">SELECTED ENGINEERING</span><h2>把想法，构建成系统。</h2></div><a class="text-link" href="#work">全部项目 →</a></div><div class="project-grid">${engineering.map(p=>project(p,{compact:true})).join('')}</div></section>`:''}
-    <section class="experience-teaser"><div><div class="eyebrow">A LITTLE ABOUT ME</div><h2>在研究和产品之间，<br>持续探索。</h2><a class="text-link" href="#about">经历与技能 →</a></div><div>${data.experience.map(x=>`<div class="teaser-row ${companyMark(x.company)?'with-logo':''}"><span class="company-heading">${companyMark(x.company)}${e(companyName(x.company))}</span><p>${e(x.role)}</p><small>${e(x.date)}</small></div>`).join('')}</div></section>${contact()}`;
+    ${blogHome()}<section class="experience-teaser"><div><div class="eyebrow">A LITTLE ABOUT ME</div><h2>在研究和产品之间，<br>持续探索。</h2><a class="text-link" href="#about">经历与技能 →</a></div><div>${data.experience.map(x=>`<div class="teaser-row ${companyMark(x.company)?'with-logo':''}"><span class="company-heading">${companyMark(x.company)}${e(companyName(x.company))}</span><p>${e(x.role)}</p><small>${e(x.date)}</small></div>`).join('')}</div></section>${contact()}`;
   }
   function listing(type) {
     const research = type==='research';
@@ -64,6 +64,50 @@
       <div class="case-copy">${p.sections.map(s=>`<section><h2>${e(s.title)}</h2><p>${e(s.text)}</p></section>`).join('')}${links(p)}</div>
       <div class="case-next"><span class="eyebrow">CONTINUE EXPLORING</span>${data.projects.filter(x=>x.type===p.type&&x.id!==p.id).map(x=>`<a href="#case/${x.id}"><span>${e(x.name)}</span><span>${e(x.subtitle)} →</span></a>`).join('')}</div></article>`;
   }
+  function publishedPosts(){return (data.posts||[]).filter(p=>p.status==='published').slice().sort((a,b)=>b.date.localeCompare(a.date));}
+  function blogUrl(value,image=false){
+    const url=String(value||'').trim();
+    if(/^https?:\/\/[^\s]+$/i.test(url))return url;
+    if(image&&/^assets\/[A-Za-z0-9._-]+\.(png|jpe?g|webp)$/i.test(url))return url;
+    if(image&&/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/.test(url))return url;
+    return '';
+  }
+  function blogInline(text){
+    const pattern=/`([^`\n]+)`|!\[([^\]\n]*)\]\(([^\s)]+)\)|\[([^\]\n]+)\]\(([^\s)]+)\)|\*\*([^*\n]+)\*\*|\*([^*\n]+)\*/g;
+    let html='',last=0,m;
+    while((m=pattern.exec(text))){html+=e(text.slice(last,m.index));
+      if(m[1]!=null)html+=`<code>${e(m[1])}</code>`;
+      else if(m[2]!=null){const url=blogUrl(m[3],true);html+=url?`<img src="${e(url)}" alt="${e(m[2])}" loading="lazy" decoding="async">`:e(m[0]);}
+      else if(m[4]!=null){const url=blogUrl(m[5]);html+=url?`<a href="${e(url)}" target="_blank" rel="noopener noreferrer">${e(m[4])} ↗</a>`:e(m[4]);}
+      else if(m[6]!=null)html+=`<strong>${e(m[6])}</strong>`;
+      else html+=`<em>${e(m[7])}</em>`;
+      last=pattern.lastIndex;
+    }return html+e(text.slice(last));
+  }
+  function renderMarkdown(markdown){
+    const lines=String(markdown||'').replace(/\r\n?/g,'\n').split('\n');let out=[],paragraph=[],list=[],listType='',quote=[];
+    function flush(){if(paragraph.length){out.push('<p>'+paragraph.map(blogInline).join('<br>')+'</p>');paragraph=[];}if(list.length){out.push(`<${listType}>`+list.map(t=>'<li>'+blogInline(t)+'</li>').join('')+`</${listType}>`);list=[];listType='';}if(quote.length){out.push('<blockquote>'+quote.map(blogInline).join('<br>')+'</blockquote>');quote=[];}}
+    for(let i=0;i<lines.length;i++){const line=lines[i];
+      const fence=line.match(/^\s*```([\w+-]*)\s*$/);
+      if(fence){flush();let code=[];while(++i<lines.length&&!/^\s*```\s*$/.test(lines[i]))code.push(lines[i]);out.push(`<pre><code${fence[1]?` data-language="${e(fence[1])}"`:''}>${e(code.join('\n'))}</code></pre>`);continue;}
+      if(!line.trim()){flush();continue;}
+      const heading=line.match(/^(#{1,6})\s+(.+)$/);if(heading){flush();const level=Math.max(2,heading[1].length);out.push(`<h${level}>${blogInline(heading[2])}</h${level}>`);continue;}
+      if(/^\s*(?:---+|\*\*\*+)\s*$/.test(line)){flush();out.push('<hr>');continue;}
+      const q=line.match(/^>\s?(.*)$/);if(q){if(paragraph.length||list.length)flush();quote.push(q[1]);continue;}
+      const bullet=line.match(/^\s*([-*+]\s+|\d+[.)]\s+)(.+)$/);if(bullet){const type=/^\d/.test(bullet[1])?'ol':'ul';if(paragraph.length||quote.length||(listType&&listType!==type))flush();listType=type;list.push(bullet[2]);continue;}
+      if(list.length||quote.length)flush();paragraph.push(line);
+    }flush();return out.join('\n');
+  }
+  function postExcerpt(p){return p.summary||p.body.replace(/[#*`>\[\]]/g,'').slice(0,110);}
+  function postCard(p){return `<article class="blog-card"><a href="#post/${e(p.id)}" class="blog-cover ${p.cover?'':'no-image'}" aria-label="阅读：${e(p.title)}">${p.cover?`<img src="${e(p.cover)}" alt="${e(p.alt||p.title)}" loading="lazy" decoding="async">`:`<span class="cover-category">${e(p.category||'随笔')}</span><span class="cover-title">${e(p.title)}</span><span class="cover-arrow" aria-hidden="true">↗</span>`}</a><div class="blog-card-meta"><time datetime="${e(p.date)}">${e(p.date.replace(/-/g,'.'))}</time><span>${e(p.category||'随笔')}</span></div><h2><a href="#post/${e(p.id)}">${e(p.title)}</a></h2><p>${e(postExcerpt(p))}</p><a class="text-link" href="#post/${e(p.id)}">阅读全文 <span aria-hidden="true">→</span></a></article>`;}
+  function blogHome(){const posts=publishedPosts().slice(0,3);return posts.length?`<section class="selected blog-home"><div class="section-title"><div><span class="eyebrow">RECENT WRITING</span><h2>记录新知，也记录思考。</h2></div><a class="text-link" href="#blog">全部博文 →</a></div><div class="blog-grid">${posts.map(postCard).join('')}</div></section>`:'';}
+  let blogQuery='',blogCategory='全部';
+  function blogList(){const posts=publishedPosts();const categories=['全部',...new Set(posts.map(p=>p.category||'随笔'))];if(!categories.includes(blogCategory))blogCategory='全部';
+    return `<section class="page-intro blog-intro"><span class="eyebrow">NOTES ON AI & BUILDING</span><h1>记录新知，也记录思考。</h1><p>AI 动态、技术实践，以及研究与构建过程中的点滴。</p></section>${posts.length?`<div class="blog-tools"><div class="blog-filters" role="group" aria-label="文章分类">${categories.map(c=>`<button data-blog-category="${e(c)}" aria-pressed="${c===blogCategory}">${e(c)}</button>`).join('')}</div><input type="search" id="blog-search" aria-label="搜索博文" placeholder="搜索标题、摘要或标签…" value="${e(blogQuery)}"></div><p class="blog-count" id="blog-count" role="status" aria-live="polite"></p><div class="blog-grid" id="blog-results"></div>`:`<div class="blog-empty"><span class="eyebrow">A SPACE FOR IDEAS</span><h2>下一篇，值得记录的发现。</h2><p>这里将分享 AI 动态、技术笔记和项目思考。<br>新的文章正在准备中，欢迎之后再来看看。</p><a class="text-link" href="${e(data.profile.github)}" target="_blank" rel="noopener noreferrer">先看看我的 GitHub ↗</a></div>`}${contact()}`;
+  }
+  function bindBlog(){const results=document.getElementById('blog-results');if(!results)return;const update=()=>{const q=blogQuery.trim().toLocaleLowerCase();const found=publishedPosts().filter(p=>(blogCategory==='全部'||(p.category||'随笔')===blogCategory)&&(!q||[p.title,p.summary,p.category,...(p.tags||[])].join(' ').toLocaleLowerCase().includes(q)));results.innerHTML=found.length?found.map(postCard).join(''):'<p class="blog-no-results">没有匹配的文章，换个关键词试试。</p>';document.getElementById('blog-count').textContent=`${found.length} 篇文章`;document.querySelectorAll('[data-blog-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.blogCategory===blogCategory)));};document.getElementById('blog-search').addEventListener('input',event=>{blogQuery=event.target.value;update();});document.querySelectorAll('[data-blog-category]').forEach(b=>b.addEventListener('click',()=>{blogCategory=b.dataset.blogCategory;update();}));update();}
+  function postPage(p){const minutes=Math.max(1,Math.ceil(p.body.length/450));const more=publishedPosts().filter(x=>x.id!==p.id).slice(0,2);return `<article class="post-detail"><a class="text-link back" href="#blog">← 返回博文</a><header class="post-heading"><div class="eyebrow">${e(p.category||'随笔')}</div><h1>${e(p.title)}</h1><div class="post-meta"><time datetime="${e(p.date)}">${e(p.date.replace(/-/g,'.'))}</time><span>${e(data.profile.name)}</span><span>约 ${minutes} 分钟阅读</span></div>${p.summary?`<p class="post-summary">${e(p.summary)}</p>`:''}${tags(p.tags||[])}</header>${p.cover?`<figure class="post-hero"><img src="${e(p.cover)}" alt="${e(p.alt||p.title)}" decoding="async"></figure>`:''}<div class="post-prose">${renderMarkdown(p.body)}${p.source?`<div class="post-source">${external(p.source,'参考来源')}</div>`:''}</div>${more.length?`<section class="more-posts"><div class="section-title"><h2>继续阅读</h2><a class="text-link" href="#blog">全部博文 →</a></div><div class="blog-grid">${more.map(postCard).join('')}</div></section>`:''}</article>`;}
+
   function render() {
     let route='home';try{route=decodeURIComponent(location.hash.slice(1)||'home')}catch{}
     // About section anchors remain part of the about view and support direct links.
@@ -71,11 +115,16 @@
     let active = anchor?'about':route;
     let html;
     const p = route.startsWith('case/') && data.projects.find(x=>x.id===route.split('/')[1]);
-    if(p){html=casePage(p);active=p.type;document.title=`${p.name} · 邵建钧`;}
+    const post=route.startsWith('post/')&&publishedPosts().find(x=>x.id===route.split('/')[1]);
+    if(post){html=postPage(post);active='blog';document.title=`${post.title} · 邵建钧`;}
+    else if(route==='blog'){html=blogList();active='blog';document.title='博文 · 邵建钧';}
+    else if(route.startsWith('post/')){html='<section class="page-intro"><h1>这篇文章暂时无法查看。</h1><p>它可能尚未发布，或已移除。</p><a class="text-link" href="#blog">返回博文 →</a></section>';active='blog';document.title='博文 · 邵建钧';}
+    else if(p){html=casePage(p);active=p.type;document.title=`${p.name} · 邵建钧`;}
     else if(active==='about'){html=about();document.title='关于 · 邵建钧';}
     else if(['work','research'].includes(active)){html=listing(active);document.title=`${active==='work'?'项目':'论文'} · 邵建钧`;}
     else{html=home();active='home';document.title='邵建钧 · Research & Engineering';}
     main.innerHTML=html;
+    if(route==='blog')bindBlog();
     document.title=document.title.replace('邵建钧',data.profile.name);
     document.querySelector('meta[name="description"]').content=data.profile.intro;
     document.querySelector('.location').innerHTML=`${e(data.profile.english)} <span>${e(data.profile.location)}</span>`;

@@ -1,5 +1,6 @@
 /* 日常维护只需要修改这里。字符串使用引号，段落使用数组，不要删除逗号。 */
 window.PORTFOLIO = {
+  posts: [],
   profile: {
     name: '邵建钧', english: 'Jianjun Shao', location: 'Beijing, China',
     email: '202421081054@mail.bnu.edu.cn', github: 'https://github.com/shaojian0514',
