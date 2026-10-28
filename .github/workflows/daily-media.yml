@@ -1,0 +1,32 @@
+name: Refresh daily sharing images
+on:
+  schedule:
+    - cron: '30 0,4,12 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: daily-sharing-images
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python daily_media.py
+      - name: Publish sharing-image metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if git diff --quiet -- daily-media.json; then exit 0; fi
+          content=$(base64 -w0 daily-media.json)
+          sha=$(gh api "repos/$GH_REPO/contents/daily-media.json" --jq '.sha')
+          jq -n --arg content "$content" --arg sha "$sha" '{message:"Update original article sharing images",content:$content,sha:$sha,branch:"main"}' > "$RUNNER_TEMP/daily-media-update.json"
+          gh api --method PUT "repos/$GH_REPO/contents/daily-media.json" --input "$RUNNER_TEMP/daily-media-update.json"
+          gh api --method POST "repos/$GH_REPO/pages/builds"
