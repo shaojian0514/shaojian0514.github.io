@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-28T06:42:00.397401+00:00",
+  "images": {
+    "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
+      "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
+      "source": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+    },
+    "https://replit.com/blog/anyone-can-bring-ideas-to-company-codebase": {
+      "image": "https://cdn.sanity.io/images/bj34pdbp/migration/013bc1ad1b9f5911b76fe44d5bac3720f69eb51a-7680x4320.jpg?w=1200&h=630&fit=max&fm=jpg",
+      "source": "https://replit.com/blog/anyone-can-bring-ideas-to-company-codebase"
+    },
+    "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2191707579.jpg?w=1024",
+      "source": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/"
+    }
+  },
+  "dates": {
+    "2026-10-28": [
+      "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "https://www.liquid.ai/blog/lfm3",
+      "https://replit.com/blog/anyone-can-bring-ideas-to-company-codebase",
+      "https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+      "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/",
+      "https://x.com/Khazix0918/status/2114878401190506902",
+      "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/",
+      "https://x.com/rohanpaul_ai/status/2115224910603890778"
+    ]
+  }
+}
