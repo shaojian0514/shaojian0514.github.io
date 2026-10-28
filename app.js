@@ -108,6 +108,62 @@
   function bindBlog(){const results=document.getElementById('blog-results');if(!results)return;const update=()=>{const q=blogQuery.trim().toLocaleLowerCase();const found=publishedPosts().filter(p=>(blogCategory==='全部'||(p.category||'随笔')===blogCategory)&&(!q||[p.title,p.summary,p.category,...(p.tags||[])].join(' ').toLocaleLowerCase().includes(q)));results.innerHTML=found.length?found.map(postCard).join(''):'<p class="blog-no-results">没有匹配的文章，换个关键词试试。</p>';document.getElementById('blog-count').textContent=`${found.length} 篇文章`;document.querySelectorAll('[data-blog-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.blogCategory===blogCategory)));};document.getElementById('blog-search').addEventListener('input',event=>{blogQuery=event.target.value;update();});document.querySelectorAll('[data-blog-category]').forEach(b=>b.addEventListener('click',()=>{blogCategory=b.dataset.blogCategory;update();}));update();}
   function postPage(p){const minutes=Math.max(1,Math.ceil(p.body.length/450));const more=publishedPosts().filter(x=>x.id!==p.id).slice(0,2);return `<article class="post-detail"><a class="text-link back" href="#blog">← 返回博文</a><header class="post-heading"><div class="eyebrow">${e(p.category||'随笔')}</div><h1>${e(p.title)}</h1><div class="post-meta"><time datetime="${e(p.date)}">${e(p.date.replace(/-/g,'.'))}</time><span>${e(data.profile.name)}</span><span>约 ${minutes} 分钟阅读</span></div>${p.summary?`<p class="post-summary">${e(p.summary)}</p>`:''}${tags(p.tags||[])}</header>${p.cover?`<figure class="post-hero"><img src="${e(p.cover)}" alt="${e(p.alt||p.title)}" decoding="async"></figure>`:''}<div class="post-prose">${renderMarkdown(p.body)}${p.source?`<div class="post-source">${external(p.source,'参考来源')}</div>`:''}</div>${more.length?`<section class="more-posts"><div class="section-title"><h2>继续阅读</h2><a class="text-link" href="#blog">全部博文 →</a></div><div class="blog-grid">${more.map(postCard).join('')}</div></section>`:''}</article>`;}
 
+  function createDailyClient({fetch:fetcher,storage=null,now=()=>Date.now(),timeoutMs=12000}){
+    const endpoint='https://aihot.news/api/v1/dailies/latest',key='jianjun-aihot-daily-v1';
+    let cache=null,retryAt=0,inflight=null;
+    const valid=payload=>payload?.schemaVersion===1&&payload.report&&/^\d{4}-\d{2}-\d{2}$/.test(payload.report.date)&&Array.isArray(payload.report.sections)&&Array.isArray(payload.report.flashes);
+    try{const saved=JSON.parse(storage?.getItem(key)||'null');if(saved&&valid(saved.payload)&&now()-saved.checkedAt<86400000)cache=saved;retryAt=Number(saved?.retryAt)||0;}catch{}
+    function persist(){try{if(cache||retryAt)storage?.setItem(key,JSON.stringify({...cache,retryAt}));else storage?.removeItem(key);}catch{}}
+    function snapshot(state='ready',message=''){return {state,message,report:cache?.payload?.report||null,notice:cache?.payload?.notice||null,checkedAt:cache?.checkedAt||null,retryAt,nextAt:Math.max(retryAt,cache?cache.checkedAt+Math.max(60000,cache.ttl):0)};}
+    function seconds(headers){const raw=headers.get('Cache-Control')||'';const m=raw.match(/(?:^|,)\s*max-age=(\d+)/i);return Math.min(86400,Math.max(0,m?Number(m[1]):60));}
+    function retryDelay(headers){const raw=headers.get('Retry-After');if(!raw)return 60000;const delay=/^\d+$/.test(raw)?Number(raw)*1000:Date.parse(raw)-now();return Math.max(60000,Number.isFinite(delay)?delay:60000);}
+    async function request(){
+      if(cache&&now()-cache.checkedAt>=86400000)cache=null;
+      if(now()<retryAt)return snapshot(cache?'stale':'error','请求暂时受限，请稍后再试。');
+      if(cache&&now()<cache.checkedAt+cache.ttl)return snapshot();
+      if(cache&&now()<cache.checkedAt+60000)return snapshot('stale','已达到本次刷新间隔，请稍后再试。');
+      const control=new AbortController(),timer=setTimeout(()=>control.abort(),timeoutMs);
+      try{const headers={Accept:'application/json'};if(cache?.etag)headers['If-None-Match']=cache.etag;
+        const response=await fetcher(endpoint,{method:'GET',mode:'cors',credentials:'omit',referrerPolicy:'no-referrer',headers,signal:control.signal});
+        if(response.status===304&&cache){cache.checkedAt=now();cache.ttl=seconds(response.headers)*1000;retryAt=0;persist();return snapshot();}
+        if(response.status===429||response.status===503){retryAt=now()+retryDelay(response.headers);persist();return snapshot(cache?'stale':'error',response.status===429?'访问较多，日报来源暂时限制刷新。':'日报来源暂时繁忙，请稍后再试。');}
+        if([403,404,410].includes(response.status)){cache=null;retryAt=now()+60000;persist();return snapshot('error',response.status===404?'暂未找到可用日报，请前往来源查看。':'当前日报暂时无法读取，请前往来源查看。');}
+        if(!response.ok)throw Error('HTTP '+response.status);
+        const payload=await response.json();if(!valid(payload))throw Error('Unexpected daily format');
+        cache={payload,etag:response.headers.get('ETag')||'',checkedAt:now(),ttl:seconds(response.headers)*1000};retryAt=0;persist();return snapshot();
+      }catch(error){retryAt=now()+60000;persist();return snapshot(cache?'stale':'error',error.name==='AbortError'?'读取日报超时，请稍后再试。':'暂时无法连接日报来源。');}
+      finally{clearTimeout(timer);}
+    }
+    return {load(){if(!inflight)inflight=request().finally(()=>inflight=null);return inflight;},peek(){return snapshot(cache?'ready':'idle');},endpoint};
+  }
+
+  let dailyStorage=null;try{dailyStorage=window.localStorage;}catch{}
+  const dailyClient=createDailyClient({fetch:window.fetch.bind(window),storage:dailyStorage});
+  let dailyState=null,dailyCategory='全部',dailyBusy=false,dailyTimer=null;
+  function dailyUrl(value){try{const url=new URL(String(value));return ['http:','https:'].includes(url.protocol)?url.href:'';}catch{return '';}}
+  function dailyLink(url,label,cls='text-link'){const safe=dailyUrl(url);return safe?`<a class="${cls}" href="${e(safe)}" target="_blank" rel="noopener noreferrer">${e(label)} ↗</a>`:'';}
+  function dailyText(text,max=150){const s=String(text||'');return s.length>max?s.slice(0,max)+'…':s;}
+  function dailyDate(value,clock=false){try{const d=new Date(clock?value:value+'T00:00:00+08:00');return new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'long',day:'numeric',...(clock?{hour:'2-digit',minute:'2-digit'}:{weekday:'long'})}).format(d);}catch{return String(value||'');}}
+  function dailyPage(){return `<section class="page-intro daily-intro"><span class="eyebrow">A DAILY WINDOW INTO AI</span><h1>AI 日报</h1><p>浏览当天值得关注的 AI 进展，保留报道来源与原文入口。</p></section><section class="daily-reader" aria-label="AI 日报阅读区"><div class="daily-toolbar"><div><span class="live-dot"></span>资讯来源 ${dailyLink('https://aihot.news/daily','AIHOT','daily-source')}</div><div class="daily-toolbar-actions"><span id="daily-refresh-hint"></span><button id="daily-refresh" class="button">${window.PORTFOLIO_PREVIEW?'读取最新日报':'刷新日报'} ↻</button></div></div><p class="daily-status" id="daily-status" role="status" aria-live="polite"></p><div id="daily-content" aria-busy="true"><div class="daily-loading"><span></span><span></span><span></span><p>正在读取最新一期日报…</p></div></div><div class="daily-provenance"><p>日报内容由 ${dailyLink('https://aihot.news/daily','AIHOT')} 根据公开报道整理；本站呈现有限速览，完整内容与更正请以来源页面为准。</p><p>原文与摘要可能存在时效差异，重要信息请核对原始报道。${dailyLink('https://aihot.news/terms','来源使用规则')}</p></div></section>`;}
+  function dailyEntries(report){return report.sections.slice(0,30).flatMap(section=>(Array.isArray(section.items)?section.items:[]).slice(0,100).map(item=>({...item,category:String(section.label||'其他')})));}
+  function dailyItem(item){return `<article class="daily-card"><div class="daily-card-meta"><span>${e(item.category)}</span><span>${e(item.source?.name||'来源见原文')}</span></div><h3>${dailyLink(item.links?.aihot||item.attribution?.url||item.links?.original,item.title,'daily-title-link')}</h3>${item.summary?`<p>${e(dailyText(item.summary,150))}</p>`:''}<div class="daily-item-links">${dailyLink(item.links?.original,'原文')}${dailyLink(item.attribution?.url||item.links?.aihot,item.attribution?.name||'AIHOT')}</div></article>`;}
+  function paintDaily(){const content=document.getElementById('daily-content');if(!content)return;const report=dailyState?.report,status=document.getElementById('daily-status');
+    content.setAttribute('aria-busy',String(dailyBusy));
+    if(!report){status.textContent=dailyState?.message||'';content.innerHTML=`<div class="daily-empty"><span class="eyebrow">${window.PORTFOLIO_PREVIEW&&!dailyState?'LIVE READER':'READ FROM THE SOURCE'}</span><h2>${window.PORTFOLIO_PREVIEW&&!dailyState?'AI 日报按需读取。':'这次暂时没有读到日报。'}</h2><p>${window.PORTFOLIO_PREVIEW&&!dailyState?'点击上方「读取最新日报」查看实时内容，编辑预览不会自动重复请求。':'你可以稍后重试，或直接前往 AIHOT 阅读。'}</p>${dailyLink('https://aihot.news/daily','前往日报来源','button')}</div>`;updateDailyButton();return;}
+    const rows=dailyEntries(report),categories=['全部',...new Set(rows.map(x=>x.category))];if(!categories.includes(dailyCategory))dailyCategory='全部';
+    status.classList.toggle('is-stale',dailyState.state==='stale');
+    status.textContent=dailyState.state==='stale'?dailyState.message+' 当前显示上次成功读取的内容。':`已读取 · ${dailyDate(dailyState.checkedAt,true)}`;
+    const canonical=dailyUrl(report.links?.aihot)||dailyUrl(report.attribution?.url)||'https://aihot.news/daily';
+    const lead=report.lead;
+    content.innerHTML=`<div class="daily-edition"><div><span class="eyebrow">DAILY BRIEFING</span><h2>${e(dailyDate(report.date))}</h2><p>来源出刊时间：${e(dailyDate(report.generatedAt,true))} · 北京时间</p></div>${dailyLink(canonical,'阅读完整日报','button')}</div>${lead?`<article class="daily-lead"><div class="eyebrow">今日头条 · 来源摘要</div><h2>${dailyLink(canonical,lead.title,'daily-title-link')}</h2><p>${e(dailyText(lead.leadParagraph,170))}</p>${dailyLink(canonical,'查看本期报道')}</article>`:''}${rows.length?`<div class="daily-section-head"><h2>分类速览</h2><span>选读摘要，更多内容见原刊</span></div><div class="daily-filters" role="group" aria-label="日报分类">${categories.map(c=>`<button data-daily-category="${e(c)}" aria-pressed="${c===dailyCategory}">${e(c)}</button>`).join('')}</div><div class="daily-grid" id="daily-results"></div><p class="daily-more" id="daily-more"></p>`:`<div class="daily-quiet"><p>本期没有分类条目。请查看上方头条或来源说明。</p></div>`}${report.flashes.length?`<section class="daily-flashes"><div class="daily-section-head"><h2>快讯选读</h2>${dailyLink(canonical,'更多快讯')}</div>${report.flashes.slice(0,4).map(item=>`<article><h3>${dailyLink(item.links?.aihot||item.attribution?.url||item.links?.original,item.title,'daily-title-link')}</h3><div><span>${e(item.source?.name||'')}</span>${dailyLink(item.links?.original,'原文')}</div></article>`).join('')}</section>`:''}<p class="daily-canonical">${dailyLink(report.attribution?.url||canonical,'本期来源：'+(report.attribution?.name||'AIHOT'))}</p>`;
+    function filtered(){const selected=rows.filter(x=>dailyCategory==='全部'||x.category===dailyCategory);document.getElementById('daily-results').innerHTML=selected.slice(0,8).map(dailyItem).join('');document.getElementById('daily-more').innerHTML=selected.length>8?`当前展示前 8 条摘要。${dailyLink(canonical,'查看本期全部内容')}`:'';document.querySelectorAll('[data-daily-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.dailyCategory===dailyCategory)));}
+    if(rows.length){document.querySelectorAll('[data-daily-category]').forEach(b=>b.addEventListener('click',()=>{dailyCategory=b.dataset.dailyCategory;filtered();}));filtered();}
+    updateDailyButton();
+  }
+  function updateDailyButton(){const button=document.getElementById('daily-refresh');if(!button){clearTimeout(dailyTimer);return;}const wait=Math.max(0,(dailyState?.nextAt||0)-Date.now());button.disabled=dailyBusy||wait>0;button.textContent=dailyBusy?'正在读取…':'刷新日报 ↻';document.getElementById('daily-refresh-hint').textContent=wait>0?`${Math.ceil(wait/1000)} 秒后可刷新`:'';clearTimeout(dailyTimer);if(wait>0)dailyTimer=setTimeout(updateDailyButton,Math.min(1000,wait+10));}
+  async function loadDaily(){if(dailyBusy)return;dailyBusy=true;updateDailyButton();document.getElementById('daily-content')?.setAttribute('aria-busy','true');dailyState=await dailyClient.load();dailyBusy=false;paintDaily();}
+  function bindDaily(){document.getElementById('daily-refresh').addEventListener('click',loadDaily);if(window.PORTFOLIO_PREVIEW&&!dailyState){paintDaily();const b=document.getElementById('daily-refresh');if(b)b.textContent='读取最新日报 ↻';}else{if(dailyState)paintDaily();loadDaily();}}
+
   function render() {
     let route='home';try{route=decodeURIComponent(location.hash.slice(1)||'home')}catch{}
     // About section anchors remain part of the about view and support direct links.
@@ -117,6 +173,7 @@
     const p = route.startsWith('case/') && data.projects.find(x=>x.id===route.split('/')[1]);
     const post=route.startsWith('post/')&&publishedPosts().find(x=>x.id===route.split('/')[1]);
     if(post){html=postPage(post);active='blog';document.title=`${post.title} · 邵建钧`;}
+    else if(route==='daily'){html=dailyPage();active='daily';document.title='AI 日报 · 邵建钧';}
     else if(route==='blog'){html=blogList();active='blog';document.title='博文 · 邵建钧';}
     else if(route.startsWith('post/')){html='<section class="page-intro"><h1>这篇文章暂时无法查看。</h1><p>它可能尚未发布，或已移除。</p><a class="text-link" href="#blog">返回博文 →</a></section>';active='blog';document.title='博文 · 邵建钧';}
     else if(p){html=casePage(p);active=p.type;document.title=`${p.name} · 邵建钧`;}
@@ -125,6 +182,7 @@
     else{html=home();active='home';document.title='邵建钧 · Research & Engineering';}
     main.innerHTML=html;
     if(route==='blog')bindBlog();
+    if(route==='daily')bindDaily();
     document.title=document.title.replace('邵建钧',data.profile.name);
     document.querySelector('meta[name="description"]').content=data.profile.intro;
     document.querySelector('.location').innerHTML=`${e(data.profile.english)} <span>${e(data.profile.location)}</span>`;
