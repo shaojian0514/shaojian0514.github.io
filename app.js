@@ -41,9 +41,10 @@
       <p class="hero-intro">${e(data.profile.intro)}</p>
       <div class="hero-bottom"><a class="person-pill" href="#about"><img src="${e(data.profile.portrait||'assets/portrait.png')}" width="44" height="44" alt="${e(data.profile.name)}的头像"><span>关于我 <span aria-hidden="true">→</span></span></a><span class="hero-line"></span><span class="hero-note">${e(data.profile.interests.join(' · '))}</span></div>
     </section>
+    <section class="experience-teaser"><div><div class="eyebrow">A LITTLE ABOUT ME</div><h2>在研究和产品之间，<br>持续探索。</h2><a class="text-link" href="#about">经历与技能 →</a></div><div>${data.experience.map(x=>`<div class="teaser-row ${companyMark(x.company)?'with-logo':''}"><span class="company-heading">${companyMark(x.company)}${e(companyName(x.company))}</span><p>${e(x.role)}</p><small>${e(x.date)}</small></div>`).join('')}</div></section>
     ${featured?`<section class="selected"><div class="section-title"><div><span class="eyebrow">SELECTED RESEARCH</span><h2>从问题出发，探索可靠的智能。</h2></div><a class="text-link" href="#research">全部论文 →</a></div>${project(featured,{eager:true})}</section>`:''}
     ${engineering.length?`<section class="selected"><div class="section-title"><div><span class="eyebrow">SELECTED ENGINEERING</span><h2>把想法，构建成系统。</h2></div><a class="text-link" href="#work">全部项目 →</a></div><div class="project-grid">${engineering.map(p=>project(p,{compact:true})).join('')}</div></section>`:''}
-    ${blogHome()}<section class="experience-teaser"><div><div class="eyebrow">A LITTLE ABOUT ME</div><h2>在研究和产品之间，<br>持续探索。</h2><a class="text-link" href="#about">经历与技能 →</a></div><div>${data.experience.map(x=>`<div class="teaser-row ${companyMark(x.company)?'with-logo':''}"><span class="company-heading">${companyMark(x.company)}${e(companyName(x.company))}</span><p>${e(x.role)}</p><small>${e(x.date)}</small></div>`).join('')}</div></section>${contact()}`;
+    ${blogHome()}${contact()}`;
   }
   function listing(type) {
     const research = type==='research';
