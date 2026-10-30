@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T06:07:42.882619+00:00",
+  "updatedAt": "2026-10-30T06:08:38.961536+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -41,9 +41,43 @@
     "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/": {
       "image": "https://github.blog/wp-content/uploads/2026/10/Octoverse2026_BlogHeader_2.jpg",
       "source": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/"
+    },
+    "https://huggingface.co/blog/mistral-large4": {
+      "image": "https://huggingface.co/blog/assets/ml4/thumbnail.png",
+      "source": "https://huggingface.co/blog/mistral-large4"
+    },
+    "https://factory.com/news/frontier-harness": {
+      "image": "https://factory.com/static/cover-393026.png",
+      "source": "https://factory.com/news/frontier-harness"
+    },
+    "https://openrouter.ai/blog/announcements/how-we-rebuilt-provider-routing/": {
+      "image": "https://openrouter.ai/blog/images/new-provider-routing.png",
+      "source": "https://openrouter.ai/blog/announcements/how-we-rebuilt-provider-routing/"
+    },
+    "https://the-decoder.com/chinese-spies-targeted-nvidia-ceo-jensen-huang-according-to-the-new-york-times/": {
+      "image": "https://the-decoder.com/wp-content/uploads/2025/12/nvidia_logo_wall_cb-1.jpeg",
+      "source": "https://the-decoder.com/chinese-spies-targeted-nvidia-ceo-jensen-huang-according-to-the-new-york-times/"
+    },
+    "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2023/03/reddit-e1708636699632.jpg?resize=1200,800",
+      "source": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/"
+    },
+    "https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/": {
+      "image": "https://the-decoder.com/wp-content/uploads/2026/06/google_logo_wall-2.png",
+      "source": "https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/"
     }
   },
   "dates": {
+    "2026-10-30": [
+      "https://huggingface.co/blog/mistral-large4",
+      "https://x.com/Khazix0918/status/2115898252004622617",
+      "https://x.com/thsottiaux/status/2115850175868727621",
+      "https://factory.com/news/frontier-harness",
+      "https://openrouter.ai/blog/announcements/how-we-rebuilt-provider-routing/",
+      "https://the-decoder.com/chinese-spies-targeted-nvidia-ceo-jensen-huang-according-to-the-new-york-times/",
+      "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
+      "https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/"
+    ],
     "2026-10-29": [
       "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
       "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247499654&idx=1&sn=9bcbf9492c492a5d5e611af41670425f",
