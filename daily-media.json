@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T06:08:38.961536+00:00",
+  "updatedAt": "2026-10-31T06:02:41.675831+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -65,9 +65,35 @@
     "https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/": {
       "image": "https://the-decoder.com/wp-content/uploads/2026/06/google_logo_wall-2.png",
       "source": "https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/"
+    },
+    "https://ai.google.dev/gemini-api/docs/changelog#10-30-2026": {
+      "image": "https://ai.google.dev/static/site-assets/images/release-notes.png",
+      "source": "https://ai.google.dev/gemini-api/docs/changelog#10-30-2026"
+    },
+    "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2022/09/GettyImages-1415078085.jpg?resize=1200,721",
+      "source": "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/"
+    },
+    "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/10/mick-haupt-7Kv1Elbagcc-unsplash.jpg?resize=1200,800",
+      "source": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/"
+    },
+    "https://waymo.com/blog/2026/10/toyota-bz4x-partnership": {
+      "image": "https://lh3.googleusercontent.com/ZRP7Frz9jGGzruXHXeJ2YTJs9_c8j5lDc9QC5glIOixMoSzbgmnA79fx37DnlLJqlfD9KIFbCZkHLyc5DUv3MLY5DaRndm1GrcQuC1wQWtFKnfh7",
+      "source": "https://waymo.com/blog/2026/10/toyota-bz4x-partnership"
     }
   },
   "dates": {
+    "2026-10-31": [
+      "https://x.com/adocomplete/status/2116224220539883992",
+      "https://ai.google.dev/gemini-api/docs/changelog#10-30-2026",
+      "https://x.com/cursor_ai/status/2116074289053175808",
+      "https://www.ithome.com/1/020/395.htm",
+      "https://x.com/_philschmid/status/2116235686445502608",
+      "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/",
+      "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+      "https://waymo.com/blog/2026/10/toyota-bz4x-partnership"
+    ],
     "2026-10-30": [
       "https://huggingface.co/blog/mistral-large4",
       "https://x.com/Khazix0918/status/2115898252004622617",
