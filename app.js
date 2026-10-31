@@ -157,7 +157,9 @@
   function dailyDate(value,clock=false){try{return new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'long',day:'numeric',...(clock?{hour:'2-digit',minute:'2-digit'}:{weekday:'long'})}).format(new Date(clock?value:value+'T00:00:00+08:00'));}catch{return String(value||'');}}
   function dailyToday(){return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
   function dailyResource(){return dailySelectedDate||'latest';}
-  function dailyPage(){return `<div class="daily-layout"><aside class="daily-archive" aria-label="往期日报"><div class="daily-archive-head"><div><span class="eyebrow">DAILY ARCHIVE</span><h2>往期日报</h2></div><a href="#daily" class="daily-latest">最新一期 ↗</a></div><form id="daily-date-form"><label for="daily-date-input">按日期阅读</label><div><input id="daily-date-input" type="date" max="${dailyToday()}" required aria-label="选择日报日期"><button type="submit">前往</button></div></form><nav id="daily-archive-list" aria-label="日报日期"><p class="daily-archive-message">正在读取日期…</p></nav></aside><section class="daily-reader daily-paper" aria-label="AI 日报阅读区"><p class="daily-status" id="daily-status" role="status" aria-live="polite" hidden></p><div id="daily-content" aria-busy="true"><h1 class="daily-loading-title">AI 日报</h1><div class="daily-loading"><span></span><span></span><span></span><p>正在读取日报…</p></div></div></section></div>`;}
+  function dailyFeatures(){return (data.dailyArticles||[]).length?`<section class="daily-features" style="padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:24px"><span class="eyebrow">专题选读</span>${data.dailyArticles.map(a=>`<article><time>${e(a.date)}</time><h2><a href="#daily/article/${e(a.id)}">${e(a.title)} →</a></h2><p>${e(a.summary)}</p></article>`).join('')}</section>`:'';}
+  function dailyArticlePage(a){return `<article class="post-detail"><a class="text-link back" href="#daily">← 返回 AI 日报</a><header class="post-heading"><div class="eyebrow">AI 日报 · 专题选读</div><h1>${e(a.title)}</h1><div class="post-meta"><time>${e(a.date)}</time></div></header><div class="post-prose">${renderMarkdown(a.body).replaceAll('<img ','<img referrerpolicy="no-referrer" ')}</div><a class="text-link" href="#daily">← 返回 AI 日报</a></article>`;}
+  function dailyPage(){return `<div class="daily-layout"><aside class="daily-archive" aria-label="往期日报"><div class="daily-archive-head"><div><span class="eyebrow">DAILY ARCHIVE</span><h2>往期日报</h2></div><a href="#daily" class="daily-latest">最新一期 ↗</a></div><form id="daily-date-form"><label for="daily-date-input">按日期阅读</label><div><input id="daily-date-input" type="date" max="${dailyToday()}" required aria-label="选择日报日期"><button type="submit">前往</button></div></form><nav id="daily-archive-list" aria-label="日报日期"><p class="daily-archive-message">正在读取日期…</p></nav></aside><section class="daily-reader daily-paper" aria-label="AI 日报阅读区">${dailyFeatures()}<p class="daily-status" id="daily-status" role="status" aria-live="polite" hidden></p><div id="daily-content" aria-busy="true"><h1 class="daily-loading-title">AI 日报</h1><div class="daily-loading"><span></span><span></span><span></span><p>正在读取日报…</p></div></div></section></div>`;}
   function dailyEntries(report){return report.sections.slice(0,30).flatMap(section=>(Array.isArray(section.items)?section.items:[]).slice(0,100).map(item=>({...item,category:String(section.label||'其他')})));}
   function paintDailyArchive(){const list=document.getElementById('daily-archive-list');if(!list)return;const items=dailyIndexState?.items||[];const selected=dailySelectedDate||dailyState?.report?.date||'';const input=document.getElementById('daily-date-input');if(input&&document.activeElement!==input)input.value=dailyClient.isDate(selected)?selected:'';
     if(!items.length){list.innerHTML=`<p class="daily-archive-message">${e(dailyIndexState?.message||(window.PORTFOLIO_PREVIEW?'点击读取日报后加载往期日期。':'正在读取日期…'))}</p>`;return;}
@@ -193,13 +195,15 @@
     clearTimeout(dailyTimer);
     let route='home';try{route=decodeURIComponent(location.hash.slice(1)||'home')}catch{}
     // About section anchors remain part of the about view and support direct links.
-    const dailyRoute=route==='daily'||route.startsWith('daily/');
+    const dailyArticle=route.startsWith('daily/article/')&&(data.dailyArticles||[]).find(a=>a.id===route.split('/')[2]);
+    const dailyRoute=(route==='daily'||route.startsWith('daily/'))&&!route.startsWith('daily/article/');
     const anchor = ['experience','education','skills'].includes(route) ? route : null;
     let active = anchor?'about':route;
     let html;
     const p = route.startsWith('case/') && data.projects.find(x=>x.id===route.split('/')[1]);
     const post=route.startsWith('post/')&&publishedPosts().find(x=>x.id===route.split('/')[1]);
-    if(post){html=postPage(post);active='blog';document.title=`${post.title} · 邵建钧`;}
+    if(dailyArticle){html=dailyArticlePage(dailyArticle);active='daily';document.title=`${dailyArticle.title} · AI 日报`;}
+    else if(post){html=postPage(post);active='blog';document.title=`${post.title} · 邵建钧`;}
     else if(dailyRoute){html=dailyPage();active='daily';document.title='AI 日报 · 邵建钧';}
     else if(route==='blog'){html=blogList();active='blog';document.title='博文 · 邵建钧';}
     else if(route.startsWith('post/')){html='<section class="page-intro"><h1>这篇文章暂时无法查看。</h1><p>它可能尚未发布，或已移除。</p><a class="text-link" href="#blog">返回博文 →</a></section>';active='blog';document.title='博文 · 邵建钧';}
