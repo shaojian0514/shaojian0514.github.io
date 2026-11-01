@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-31T06:02:41.675831+00:00",
+  "updatedAt": "2026-11-01T06:33:23.032105+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -81,9 +81,32 @@
     "https://waymo.com/blog/2026/10/toyota-bz4x-partnership": {
       "image": "https://lh3.googleusercontent.com/ZRP7Frz9jGGzruXHXeJ2YTJs9_c8j5lDc9QC5glIOixMoSzbgmnA79fx37DnlLJqlfD9KIFbCZkHLyc5DUv3MLY5DaRndm1GrcQuC1wQWtFKnfh7",
       "source": "https://waymo.com/blog/2026/10/toyota-bz4x-partnership"
+    },
+    "https://www.figma.com/blog/the-tldr-on-figma-weave/": {
+      "image": "https://cdn.sanity.io/images/599r6htc/regionalized/6ff46e4235ab02c904cb2673573d5fefd08312aa-3264x1836.png?w=1200&q=70&fit=max&auto=format",
+      "source": "https://www.figma.com/blog/the-tldr-on-figma-weave/"
+    },
+    "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/GettyImages-2235971874.jpg?resize=1200,800",
+      "source": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/"
+    },
+    "https://www.wiz.io/blog/black-october-for-ai-developer-platforms": {
+      "image": "https://www.datocms-assets.com/75231/1793387884-threat-update-large-title_custom.jpeg?fm=webp",
+      "source": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms"
+    },
+    "https://openrouter.ai/blog/tutorials/build-always-on-ai-agent/": {
+      "image": "https://openrouter.ai/blog/images/build-always-on-ai-agent.png",
+      "source": "https://openrouter.ai/blog/tutorials/build-always-on-ai-agent/"
     }
   },
   "dates": {
+    "2026-11-01": [
+      "https://www.figma.com/blog/the-tldr-on-figma-weave/",
+      "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+      "https://www.ithome.com/1/020/632.htm",
+      "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+      "https://openrouter.ai/blog/tutorials/build-always-on-ai-agent/"
+    ],
     "2026-10-31": [
       "https://x.com/adocomplete/status/2116224220539883992",
       "https://ai.google.dev/gemini-api/docs/changelog#10-30-2026",
