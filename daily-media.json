@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-02T06:34:12.452095+00:00",
+  "updatedAt": "2026-11-03T07:04:20.337320+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -101,9 +101,25 @@
     "https://openrouter.ai/blog/tutorials/ai-code-review/": {
       "image": "https://openrouter.ai/blog/images/ai-code-review.png",
       "source": "https://openrouter.ai/blog/tutorials/ai-code-review/"
+    },
+    "https://claude.com/blog/message-threads": {
+      "image": "https://claude.com/resources/articles/message-threads/opengraph-image/og",
+      "source": "https://claude.com/blog/message-threads"
+    },
+    "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/": {
+      "image": "https://the-decoder.com/wp-content/uploads/2026/08/anthropic_claude.png",
+      "source": "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/"
     }
   },
   "dates": {
+    "2026-11-03": [
+      "https://claude.com/blog/message-threads",
+      "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498763&idx=1&sn=279f8fb4e43a987fdc0aa2af0b0f7958",
+      "https://openai.com/index/grid-protectors-program",
+      "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/",
+      "https://alignment.openai.com/training-activation-classifiers/",
+      "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647688060&idx=1&sn=e00d7e57b6f0e3670f0e267e677047df"
+    ],
     "2026-11-02": [
       "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647688028&idx=1&sn=e509269da2e0e0b4d4dfbb121b42204b",
       "https://openrouter.ai/blog/tutorials/ai-code-review/",
