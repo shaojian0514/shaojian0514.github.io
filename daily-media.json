@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-03T07:04:20.337320+00:00",
+  "updatedAt": "2026-11-04T06:47:34.710826+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -109,9 +109,27 @@
     "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/": {
       "image": "https://the-decoder.com/wp-content/uploads/2026/08/anthropic_claude.png",
       "source": "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/"
+    },
+    "https://ai.google.dev/gemini-api/docs/changelog#11-02-2026": {
+      "image": "https://ai.google.dev/static/site-assets/images/share-ais-513315318.png",
+      "source": "https://ai.google.dev/gemini-api/docs/changelog#11-02-2026"
+    },
+    "https://www.wheresyoured.at/running-dry/": {
+      "image": "https://storage.ghost.io/c/24/d8/24d8fcec-dfba-4f40-a467-823d2941ae46/content/images/2024/01/wyea--1.jpeg",
+      "source": "https://www.wheresyoured.at/running-dry/"
     }
   },
   "dates": {
+    "2026-11-04": [
+      "https://x.com/MistralAI/status/2117562068220195097",
+      "https://ai.google.dev/gemini-api/docs/changelog#11-02-2026",
+      "https://x.com/rohanpaul_ai/status/2117757237557088263",
+      "https://twitter.com/guilleflorvs/status/2117379073785696395",
+      "https://openai.com/index/dan-driscoll-joins-openai",
+      "https://alignment.openai.com/eval-production-behavior-gap/",
+      "https://openai.com/index/lifeval",
+      "https://www.wheresyoured.at/running-dry/"
+    ],
     "2026-11-03": [
       "https://claude.com/blog/message-threads",
       "https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498763&idx=1&sn=279f8fb4e43a987fdc0aa2af0b0f7958",
