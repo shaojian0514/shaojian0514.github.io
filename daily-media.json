@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-04T06:47:34.710826+00:00",
+  "updatedAt": "2026-11-05T07:08:13.313591+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -117,9 +117,27 @@
     "https://www.wheresyoured.at/running-dry/": {
       "image": "https://storage.ghost.io/c/24/d8/24d8fcec-dfba-4f40-a467-823d2941ae46/content/images/2024/01/wyea--1.jpeg",
       "source": "https://www.wheresyoured.at/running-dry/"
+    },
+    "https://cognition.com/blog/swe-2-flash": {
+      "image": "https://cognition.com/images/swe-2-flash/cover.jpg",
+      "source": "https://cognition.com/blog/swe-2-flash"
+    },
+    "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/": {
+      "image": "https://images.unsplash.com/photo-1715026323215-a2dbb71272f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fGRhdGElMjBjZW50ZXJ8ZW58MHx8fHwxNzkzODE1MDQwfDA&ixlib=rb-4.1.0&q=80&w=2000",
+      "source": "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/"
     }
   },
   "dates": {
+    "2026-11-05": [
+      "https://mp.weixin.qq.com/s/JrQeiqx3PXBDSGish2IzwA",
+      "https://x.com/rohanpaul_ai/status/2118059884055024027",
+      "https://cognition.com/blog/swe-2-flash",
+      "https://x.com/OpenAI/status/2118124966055223755",
+      "https://openai.com/index/openai-to-acquire-pierre",
+      "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/",
+      "https://openai.com/index/a-thousand-fewer-paths-to-root",
+      "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/"
+    ],
     "2026-11-04": [
       "https://x.com/MistralAI/status/2117562068220195097",
       "https://ai.google.dev/gemini-api/docs/changelog#11-02-2026",
