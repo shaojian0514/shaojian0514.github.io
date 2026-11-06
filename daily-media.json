@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-05T07:08:13.313591+00:00",
+  "updatedAt": "2026-11-06T07:07:19.771277+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -125,9 +125,39 @@
     "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/": {
       "image": "https://images.unsplash.com/photo-1715026323215-a2dbb71272f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDV8fGRhdGElMjBjZW50ZXJ8ZW58MHx8fHwxNzkzODE1MDQwfDA&ixlib=rb-4.1.0&q=80&w=2000",
       "source": "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/"
+    },
+    "https://thinkingmachines.ai/news/inkling-2-small/": {
+      "image": "https://thinkingmachines.ai/news/inkling-2-small/images/cover-social.png",
+      "source": "https://thinkingmachines.ai/news/inkling-2-small/"
+    },
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni-1.2_FZLql41.width-1300.png",
+      "source": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+    },
+    "https://cursor.com/changelog/build-live-apps": {
+      "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/changelog/opengraph-changelog-11-05-26.png",
+      "source": "https://cursor.com/changelog/build-live-apps"
+    },
+    "https://claude.com/blog/introducing-personal-finance-in-claude": {
+      "image": "https://claude.com/resources/articles/introducing-personal-finance-in-claude/opengraph-image/og",
+      "source": "https://claude.com/blog/introducing-personal-finance-in-claude"
+    },
+    "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai": {
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/STK423_ELECTIONS2.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "source": "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai"
     }
   },
   "dates": {
+    "2026-11-06": [
+      "https://openai.com/index/introducing-gpt-6-cyber",
+      "https://thinkingmachines.ai/news/inkling-2-small/",
+      "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "https://cursor.com/changelog/build-live-apps",
+      "https://claude.com/blog/introducing-personal-finance-in-claude",
+      "https://x.com/perplexity_ai/status/2118389326459670825",
+      "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai",
+      "https://x.com/rohanpaul_ai/status/2118461023808323957"
+    ],
     "2026-11-05": [
       "https://mp.weixin.qq.com/s/JrQeiqx3PXBDSGish2IzwA",
       "https://x.com/rohanpaul_ai/status/2118059884055024027",
