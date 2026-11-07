@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06T07:07:19.771277+00:00",
+  "updatedAt": "2026-11-07T06:20:20.932198+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -145,9 +145,35 @@
     "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai": {
       "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/STK423_ELECTIONS2.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
       "source": "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai"
+    },
+    "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/": {
+      "image": "https://openrouter.ai/blog/images/auto-and-auto-code-routers.png",
+      "source": "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/"
+    },
+    "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/": {
+      "image": "https://about.fb.com/wp-content/uploads/2026/11/Design-the-Muse-App_Just-for-You_Social-Share.png?w=1200",
+      "source": "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/"
+    },
+    "https://cursor.com/changelog/voice-chat": {
+      "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/og/opengraph-default.png",
+      "source": "https://cursor.com/changelog/voice-chat"
+    },
+    "https://ampcode.com/news/spaces": {
+      "image": "https://ampcode.com/og?_template=news&_version=7&title=Spaces&date=November+6%2C+2026&tagline=Spaces+are+a+new%2C+higher-level+way+to+work+with+many+agents+and+teammates.&backgroundImage=https%3A%2F%2Fstatic.ampcode.com%2Fnews%2Fspaces-cover.avif&sig=ed2785dd3bf7a53d05a2361d7038665b80cdfaac120bd6ccf6253376c046fd40",
+      "source": "https://ampcode.com/news/spaces"
     }
   },
   "dates": {
+    "2026-11-07": [
+      "https://ernie.baidu.com/zh/release/ernie-5-5-flash-base/",
+      "https://mp.weixin.qq.com/s/k1AUP6MNS0zqtcc92idrcg",
+      "https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/",
+      "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/",
+      "https://cursor.com/changelog/voice-chat",
+      "https://ampcode.com/news/spaces",
+      "https://x.com/rohanpaul_ai/status/2118813225336873181",
+      "https://mp.weixin.qq.com/s/k0Yt8r-ViM8FN1axHrP8tQ"
+    ],
     "2026-11-06": [
       "https://openai.com/index/introducing-gpt-6-cyber",
       "https://thinkingmachines.ai/news/inkling-2-small/",
