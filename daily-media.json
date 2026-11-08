@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-07T06:20:20.932198+00:00",
+  "updatedAt": "2026-11-08T06:26:24.933201+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -164,6 +164,9 @@
     }
   },
   "dates": {
+    "2026-11-08": [
+      "https://www.ithome.com/1/023/765.htm"
+    ],
     "2026-11-07": [
       "https://ernie.baidu.com/zh/release/ernie-5-5-flash-base/",
       "https://mp.weixin.qq.com/s/k1AUP6MNS0zqtcc92idrcg",
