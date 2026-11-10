@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T07:35:29.414797+00:00",
+  "updatedAt": "2026-11-10T19:54:24.597472+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -163,7 +163,7 @@
       "source": "https://ampcode.com/news/spaces"
     },
     "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
-      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/b2dab182c77b4ccfd36423470106915b20f676ae-1200x630.jpg",
+      "image": "https://assets.claude.com/21b3240f9264f8e4c8ab1390e2702cf1401b2367.jpg",
       "source": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     },
     "https://research.meta.ai/blog/muse-ember": {
