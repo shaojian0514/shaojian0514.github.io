@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T06:58:13.995641+00:00",
+  "updatedAt": "2026-11-10T07:35:29.414797+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -161,9 +161,31 @@
     "https://ampcode.com/news/spaces": {
       "image": "https://ampcode.com/og?_template=news&_version=7&title=Spaces&date=November+6%2C+2026&tagline=Spaces+are+a+new%2C+higher-level+way+to+work+with+many+agents+and+teammates.&backgroundImage=https%3A%2F%2Fstatic.ampcode.com%2Fnews%2Fspaces-cover.avif&sig=ed2785dd3bf7a53d05a2361d7038665b80cdfaac120bd6ccf6253376c046fd40",
       "source": "https://ampcode.com/news/spaces"
+    },
+    "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/b2dab182c77b4ccfd36423470106915b20f676ae-1200x630.jpg",
+      "source": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    },
+    "https://research.meta.ai/blog/muse-ember": {
+      "image": "https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp",
+      "source": "https://research.meta.ai/blog/muse-ember"
+    },
+    "https://www.zyphra.com/our-work/zonos3-mini": {
+      "image": "https://cdn.sanity.io/images/6pyafx7r/production/c4f7e31f9d0ad18bdd83895f31e848555d044963-2400x1256.png?rect=4,0,2392,1256&w=1200&h=630&fm=jpg&q=85&fit=crop",
+      "source": "https://www.zyphra.com/our-work/zonos3-mini"
     }
   },
   "dates": {
+    "2026-11-10": [
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "https://research.meta.ai/blog/muse-ember",
+      "https://seed.bytedance.com/zh/blog/%E7%94%9F%E6%88%90%E6%9B%B4%E7%9C%9F%E5%AE%9E-%E7%99%BE%E8%BD%AE%E7%BC%96%E8%BE%91%E6%9B%B4%E7%A8%B3%E5%AE%9A-seedream-5-5-%E5%8F%91%E5%B8%83",
+      "https://www.zyphra.com/our-work/zonos3-mini",
+      "https://www.youtube.com/watch?v=FMbXUxn_nBw",
+      "https://ernie.baidu.com/zh/research/posts/ernie-evolve/",
+      "https://x.com/Google/status/2119788086490001906",
+      "https://mp.weixin.qq.com/s/MyNWZlURmO0xIxQpMOQZWg"
+    ],
     "2026-11-09": [
       "https://x.com/rohanpaul_ai/status/2119540787147059491"
     ],
