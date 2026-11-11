@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T19:54:24.597472+00:00",
+  "updatedAt": "2026-11-11T06:53:13.104596+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -173,9 +173,39 @@
     "https://www.zyphra.com/our-work/zonos3-mini": {
       "image": "https://cdn.sanity.io/images/6pyafx7r/production/c4f7e31f9d0ad18bdd83895f31e848555d044963-2400x1256.png?rect=4,0,2392,1256&w=1200&h=630&fm=jpg&q=85&fit=crop",
       "source": "https://www.zyphra.com/our-work/zonos3-mini"
+    },
+    "https://deepmind.google/blog/gemini-4-carbon-is-now-available/": {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg",
+      "source": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/"
+    },
+    "https://www.minimax.io/blog/minimax-h3-image": {
+      "image": "https://file.cdn.minimax.io/public/h3-image-cover-1794323228475.jpg?x-oss-process=image/format,webp",
+      "source": "https://www.minimax.io/blog/minimax-h3-image"
+    },
+    "https://claude.com/blog/sheets-whiteboards-data": {
+      "image": "https://claude.com/resources/articles/sheets-whiteboards-data/opengraph-image/og",
+      "source": "https://claude.com/blog/sheets-whiteboards-data"
+    },
+    "https://blog.n8n.io/meet-nod/": {
+      "image": "https://storage.ghost.io/c/0d/78/0d78b34c-0c5f-4975-900e-61d00ccb1c2d/content/images/size/w1200/2026/11/nod-header-2x-1.png",
+      "source": "https://blog.n8n.io/meet-nod/"
+    },
+    "https://www.anthropic.com/news/roadshow-launch": {
+      "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+      "source": "https://www.anthropic.com/news/roadshow-launch"
     }
   },
   "dates": {
+    "2026-11-11": [
+      "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+      "https://www.minimax.io/blog/minimax-h3-image",
+      "https://claude.com/blog/sheets-whiteboards-data",
+      "https://x.com/_philschmid/status/2120186354537812452",
+      "https://blog.n8n.io/meet-nod/",
+      "https://www.anthropic.com/news/roadshow-launch",
+      "https://x.com/rohanpaul_ai/status/2120252212551332311",
+      "https://www.ithome.com/1/024/888.htm"
+    ],
     "2026-11-10": [
       "https://www.anthropic.com/claude-fable-and-mythos-5-2",
       "https://research.meta.ai/blog/muse-ember",
