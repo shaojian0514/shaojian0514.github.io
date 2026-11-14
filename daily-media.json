@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13T07:00:19.979488+00:00",
+  "updatedAt": "2026-11-14T06:49:53.990327+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -237,9 +237,39 @@
     "https://tomtunguz.com/the-impact-of-jensens-resignation/": {
       "image": "https://res.cloudinary.com/dzawgnnlr/image/upload/c_fill,g_auto,w_1200,h_630/analysis/nvidia-central-bank-after-jensen/chart-nvidia-cashflow-diverging-16x9-5a81d98773b3.png",
       "source": "https://tomtunguz.com/the-impact-of-jensens-resignation/"
+    },
+    "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer": {
+      "image": "https://cdn.hashnode.com/uploads/covers/6aea03219fa4aa99923b5acf/de5ebdea-3436-4b9a-b3f2-e9910f3a0abc.png",
+      "source": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer"
+    },
+    "https://api-docs.deepseek.com/zh-cn/updates/#发布全家桶应用-api": {
+      "image": "https://api-docs.deepseek.com/zh-cn/img/deepseek-social-card.jpeg",
+      "source": "https://api-docs.deepseek.com/zh-cn/updates/#发布全家桶应用-api"
+    },
+    "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/": {
+      "image": "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg",
+      "source": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/"
+    },
+    "https://sierra.ai/blog/releasing-poppy": {
+      "image": "https://sierra.ai/-/cdn/image?src=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fca4jck6w%2Fproduction%2F9f55c3897075ccfe5650c54d09feacbe3ac3be9a-2400x1260.png&width=1200&quality=75",
+      "source": "https://sierra.ai/blog/releasing-poppy"
+    },
+    "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2303769281.jpg?resize=1200,800",
+      "source": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/"
     }
   },
   "dates": {
+    "2026-11-14": [
+      "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+      "https://api-docs.deepseek.com/zh-cn/updates/#发布全家桶应用-api",
+      "https://x.com/ChatGPT/status/2121283151729496235",
+      "https://x.com/ClementDelangue/status/2121260104913768931",
+      "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
+      "https://sierra.ai/blog/releasing-poppy",
+      "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+      "https://x.com/AnthropicAI/status/2121272083863011714"
+    ],
     "2026-11-13": [
       "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
       "https://claude.com/blog/claude-meetings",
