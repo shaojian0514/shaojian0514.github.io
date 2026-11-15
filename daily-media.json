@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-14T06:49:53.990327+00:00",
+  "updatedAt": "2026-11-15T06:54:33.284529+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -257,9 +257,37 @@
     "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/": {
       "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2303769281.jpg?resize=1200,800",
       "source": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/"
+    },
+    "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2025/05/GettyImages-2216028442.jpg?w=1024",
+      "source": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/"
+    },
+    "https://cursor.com/blog/security-incident-update": {
+      "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/og/opengraph-default.png",
+      "source": "https://cursor.com/blog/security-incident-update"
+    },
+    "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/11/Jensen-Huang.jpg?w=1024",
+      "source": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/"
+    },
+    "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/": {
+      "image": "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/images/cover-social.png",
+      "source": "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/"
+    },
+    "https://www.interconnects.ai/p/open-source-ai-without-jensen": {
+      "image": "https://substackcdn.com/image/fetch/$s_!gFmv!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fecd978b1-9b6a-4a7d-9324-356397d10839_3182x1790.png",
+      "source": "https://www.interconnects.ai/p/open-source-ai-without-jensen"
     }
   },
   "dates": {
+    "2026-11-15": [
+      "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+      "https://cursor.com/blog/security-incident-update",
+      "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+      "https://x.com/rohanpaul_ai/status/2121391185499660332",
+      "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/",
+      "https://www.interconnects.ai/p/open-source-ai-without-jensen"
+    ],
     "2026-11-14": [
       "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
       "https://api-docs.deepseek.com/zh-cn/updates/#发布全家桶应用-api",
