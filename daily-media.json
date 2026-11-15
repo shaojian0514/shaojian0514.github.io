@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-15T06:54:33.284529+00:00",
+  "updatedAt": "2026-11-15T18:59:59.436089+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -266,10 +266,6 @@
       "image": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/og/opengraph-default.png",
       "source": "https://cursor.com/blog/security-incident-update"
     },
-    "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/": {
-      "image": "https://techcrunch.com/wp-content/uploads/2026/11/Jensen-Huang.jpg?w=1024",
-      "source": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/"
-    },
     "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/": {
       "image": "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/images/cover-social.png",
       "source": "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/"
@@ -283,7 +279,6 @@
     "2026-11-15": [
       "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
       "https://cursor.com/blog/security-incident-update",
-      "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
       "https://x.com/rohanpaul_ai/status/2121391185499660332",
       "https://thinkingmachines.ai/blog/end-to-end-4-bit-training/",
       "https://www.interconnects.ai/p/open-source-ai-without-jensen"
