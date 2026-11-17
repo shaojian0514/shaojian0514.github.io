@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T06:58:27.009242+00:00",
+  "updatedAt": "2026-11-17T08:14:41.638704+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -273,9 +273,43 @@
     "https://www.interconnects.ai/p/open-source-ai-without-jensen": {
       "image": "https://substackcdn.com/image/fetch/$s_!gFmv!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fecd978b1-9b6a-4a7d-9324-356397d10839_3182x1790.png",
       "source": "https://www.interconnects.ai/p/open-source-ai-without-jensen"
+    },
+    "https://qwen.ai/blog?id=qwen4-max": {
+      "image": "https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png",
+      "source": "https://qwen.ai/blog?id=qwen4-max"
+    },
+    "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit": {
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/10/STK155_OPEN_AI_4_CVirginia_D.png?quality=90&strip=all&crop=0%2C10.742221417566%2C100%2C78.515557164868&w=1200",
+      "source": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit"
+    },
+    "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/11/us-commerce.jpg?w=564",
+      "source": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/"
+    },
+    "https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down": {
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/STKP210_JENSEN_HUANG_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "source": "https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down"
+    },
+    "https://huggingface.co/blog/openrouter": {
+      "image": "https://huggingface.co/blog/assets/openrouter/thumbnail.jpg",
+      "source": "https://huggingface.co/blog/openrouter"
+    },
+    "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/02/china-hacker-computer-flag.jpg?resize=1200,675",
+      "source": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/"
     }
   },
   "dates": {
+    "2026-11-17": [
+      "https://qwen.ai/blog?id=qwen4-max",
+      "https://hunyuan.tencent.com/research/100145?langVersion=zh",
+      "https://x.com/_philschmid/status/2122358498461691913",
+      "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+      "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+      "https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down",
+      "https://huggingface.co/blog/openrouter",
+      "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/"
+    ],
     "2026-11-16": [],
     "2026-11-15": [
       "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
