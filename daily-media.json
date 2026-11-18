@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-17T08:14:41.638704+00:00",
+  "updatedAt": "2026-11-18T07:47:33.748289+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -297,9 +297,39 @@
     "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/": {
       "image": "https://techcrunch.com/wp-content/uploads/2026/02/china-hacker-computer-flag.jpg?resize=1200,675",
       "source": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/"
+    },
+    "https://microsoft.ai/news/microsoft-ignite-2026/": {
+      "image": "https://microsoft.ai/wp-content/uploads/2026/11/All-Up-Blog.jpg",
+      "source": "https://microsoft.ai/news/microsoft-ignite-2026/"
+    },
+    "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/": {
+      "image": "https://microsoft.ai/wp-content/uploads/2026/11/MAI-Code-2-Ignite-WithHeader-16x9-1.jpg",
+      "source": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+    },
+    "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/": {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_2784_x_1566_1.width-1300.png",
+      "source": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
+    },
+    "https://suno.com/blog/introducing-visuals": {
+      "image": "https://cdn.sanity.io/images/cl7b1q1i/production/89947c59d1f2c8fda3d2133d67c0f7e11da012c5-3840x2160.jpg?rect=0,72,3840,2016&w=1200&h=630&fit=crop&auto=format",
+      "source": "https://suno.com/blog/introducing-visuals"
+    },
+    "https://replit.com/blog/introducing-replit-missions": {
+      "image": "https://cdn.sanity.io/images/bj34pdbp/migration/3aa673405983a5f4d54bfdfbb901981f1ab32d0f-1280x720.gif?w=1200&h=630&fit=max&fm=jpg",
+      "source": "https://replit.com/blog/introducing-replit-missions"
     }
   },
   "dates": {
+    "2026-11-18": [
+      "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "https://x.com/perplexity_ai/status/2122814545639223348",
+      "https://microsoft.ai/news/microsoft-ignite-2026/",
+      "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+      "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+      "https://suno.com/blog/introducing-visuals",
+      "https://replit.com/blog/introducing-replit-missions",
+      "https://x.com/rohanpaul_ai/status/2122804149503033606"
+    ],
     "2026-11-17": [
       "https://qwen.ai/blog?id=qwen4-max",
       "https://hunyuan.tencent.com/research/100145?langVersion=zh",
