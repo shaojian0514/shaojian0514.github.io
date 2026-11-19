@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-18T07:47:33.748289+00:00",
+  "updatedAt": "2026-11-19T07:42:54.168556+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -317,9 +317,43 @@
     "https://replit.com/blog/introducing-replit-missions": {
       "image": "https://cdn.sanity.io/images/bj34pdbp/migration/3aa673405983a5f4d54bfdfbb901981f1ab32d0f-1280x720.gif?w=1200&h=630&fit=max&fm=jpg",
       "source": "https://replit.com/blog/introducing-replit-missions"
+    },
+    "https://deepmind.google/blog/introducing-gemini-4-neon/": {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+      "source": "https://deepmind.google/blog/introducing-gemini-4-neon/"
+    },
+    "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/": {
+      "image": "https://latent.space/og/card/post/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/d54e18a56681771d00f9af81d7e4a5b70fa4952861990442511933f8ff963105.png",
+      "source": "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/"
+    },
+    "https://deepmind.google/blog/genie-4-is-now-available/": {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/resized_ProjectGenie_Thumbnail_v02.width-1300.png",
+      "source": "https://deepmind.google/blog/genie-4-is-now-available/"
+    },
+    "https://www.anthropic.com/news/anthropic-prices-initial-public-offering": {
+      "image": "https://assets.claude.com/6d4a0d28992ade92d6fa63646fd9c9d318245c6c.jpg",
+      "source": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+    },
+    "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/03/jensen-huang-gtc-getty.jpg?resize=1200,781",
+      "source": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/"
+    },
+    "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2024/02/GettyImages-1930518491.jpg?resize=1200,800",
+      "source": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/"
     }
   },
   "dates": {
+    "2026-11-19": [
+      "https://deepmind.google/blog/introducing-gemini-4-neon/",
+      "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/",
+      "https://deepmind.google/blog/genie-4-is-now-available/",
+      "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+      "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+      "https://x.com/gdb/status/2123130414323888463",
+      "https://x.com/rohanpaul_ai/status/2122922693662245298",
+      "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/"
+    ],
     "2026-11-18": [
       "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
       "https://x.com/perplexity_ai/status/2122814545639223348",
