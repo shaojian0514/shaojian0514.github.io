@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-20T07:35:20.521169+00:00",
+  "updatedAt": "2026-11-21T07:30:34.337522+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -361,9 +361,35 @@
     "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings": {
       "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/gettyimages-2305716823.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
       "source": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings"
+    },
+    "https://thinkingmachines.ai/news/inkling-2-mini/": {
+      "image": "https://thinkingmachines.ai/news/inkling-2-mini/images/cover-social.png",
+      "source": "https://thinkingmachines.ai/news/inkling-2-mini/"
+    },
+    "https://browser-use.com/posts/browser-use-1-0": {
+      "image": "https://browser-use.com/api/og?title=browser-use+1.0%3A+Why+We+Replaced+24+Agent+Tools+With+One&date=Nov+20%2C+2026&author=Magnus+M%C3%BCller",
+      "source": "https://browser-use.com/posts/browser-use-1-0"
+    },
+    "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/": {
+      "image": "https://storage.googleapis.com/gweb-research2023-media/images/HO_previewImage1.width-800.format-jpeg.jpg",
+      "source": "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/"
+    },
+    "https://metr.org/blog/2026-11-20-q4-2026-capability-update/": {
+      "image": "https://metr.org/assets/images/q4-2026-capability-update/1eb15f15412f8e86-og.png",
+      "source": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/"
     }
   },
   "dates": {
+    "2026-11-21": [
+      "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "https://x.com/TencentHunyuan/status/2123625549147070538",
+      "https://x.com/Google/status/2123825847815561261",
+      "https://x.com/ChatGPT/status/2123850915061104735",
+      "https://browser-use.com/posts/browser-use-1-0",
+      "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/",
+      "https://mp.weixin.qq.com/s/8Zi3nfwddzFy6cZsK2_KxA",
+      "https://metr.org/blog/2026-11-20-q4-2026-capability-update/"
+    ],
     "2026-11-20": [
       "https://x.com/joshwoodward/status/2123534862569324703",
       "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
