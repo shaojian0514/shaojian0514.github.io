@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-21T07:30:34.337522+00:00",
+  "updatedAt": "2026-11-22T07:12:17.195157+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -377,9 +377,37 @@
     "https://metr.org/blog/2026-11-20-q4-2026-capability-update/": {
       "image": "https://metr.org/assets/images/q4-2026-capability-update/1eb15f15412f8e86-og.png",
       "source": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/"
+    },
+    "https://www.together.ai/blog/qwen4-max": {
+      "image": "https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/6b01fce39084a4a443ffe779_2026-11-19-qwen4-max-og-image.png",
+      "source": "https://www.together.ai/blog/qwen4-max"
+    },
+    "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026": {
+      "image": "https://cdn.prod.website-files.com/69654e88dce9154b5f12070c/6b022ac06b3b148585570c47_OG-image_20261121-security-event-prompt-leakage2.png",
+      "source": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026"
+    },
+    "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/": {
+      "image": "https://the-decoder.com/wp-content/uploads/2026/11/anthropic_riemann.png",
+      "source": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/"
+    },
+    "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/": {
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/ai-privacy-leakage-1152x648.jpg",
+      "source": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/"
+    },
+    "https://openai.com/index/introducing-medchembench": {
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/37ZvKdwVigsgJ7G3FMr4Nb/12854063a79d19d63278704bf54e3010/introducing-medchembench-social.png?w=1600&h=900&fit=fill",
+      "source": "https://openai.com/index/introducing-medchembench"
     }
   },
   "dates": {
+    "2026-11-22": [
+      "https://www.together.ai/blog/qwen4-max",
+      "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+      "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
+      "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+      "https://x.com/rohanpaul_ai/status/2124213113583174076",
+      "https://openai.com/index/introducing-medchembench"
+    ],
     "2026-11-21": [
       "https://thinkingmachines.ai/news/inkling-2-mini/",
       "https://x.com/TencentHunyuan/status/2123625549147070538",
