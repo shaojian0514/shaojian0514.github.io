@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T07:12:17.195157+00:00",
+  "updatedAt": "2026-11-23T07:57:34.965610+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -397,9 +397,18 @@
     "https://openai.com/index/introducing-medchembench": {
       "image": "https://images.ctfassets.net/kftzwdyauwt9/37ZvKdwVigsgJ7G3FMr4Nb/12854063a79d19d63278704bf54e3010/introducing-medchembench-social.png?w=1600&h=900&fit=fill",
       "source": "https://openai.com/index/introducing-medchembench"
+    },
+    "https://openai.com/index/perplexity-and-intelligence": {
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/6rIIhCRSKrhIfe385Onmcz/aca2d190553c62fd5d49efb5d5ce1eb6/perplexity-and-intelligence-social.png?w=1600&h=900&fit=fill",
+      "source": "https://openai.com/index/perplexity-and-intelligence"
     }
   },
   "dates": {
+    "2026-11-23": [
+      "https://x.com/OpenBMB/status/2124464239670964531",
+      "https://openai.com/index/perplexity-and-intelligence",
+      "https://x.com/OpenBMB/status/2124461770043785636"
+    ],
     "2026-11-22": [
       "https://www.together.ai/blog/qwen4-max",
       "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
