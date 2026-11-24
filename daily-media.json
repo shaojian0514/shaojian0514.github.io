@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T07:57:34.965610+00:00",
+  "updatedAt": "2026-11-24T00:09:42.139935+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -401,9 +401,35 @@
     "https://openai.com/index/perplexity-and-intelligence": {
       "image": "https://images.ctfassets.net/kftzwdyauwt9/6rIIhCRSKrhIfe385Onmcz/aca2d190553c62fd5d49efb5d5ce1eb6/perplexity-and-intelligence-social.png?w=1600&h=900&fit=fill",
       "source": "https://openai.com/index/perplexity-and-intelligence"
+    },
+    "https://claude.com/blog/introducing-claude-ship": {
+      "image": "https://claude.com/resources/articles/introducing-claude-ship/opengraph-image/og",
+      "source": "https://claude.com/blog/introducing-claude-ship"
+    },
+    "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/": {
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_pContext_Drive_1118.width-1300.png",
+      "source": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/"
+    },
+    "https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-2297572109.jpg?w=1024",
+      "source": "https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/"
+    },
+    "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit": {
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STK419_DEEPFAKE_CVIRGINIA_F.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "source": "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit"
     }
   },
   "dates": {
+    "2026-11-24": [
+      "https://mp.weixin.qq.com/s/D-IZr-QaT1or_chminK8IQ",
+      "https://claude.com/blog/introducing-claude-ship",
+      "https://x.com/thsottiaux/status/2124998553856844186",
+      "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+      "https://x.com/claudeai/status/2124970294523945328",
+      "https://x.com/thexpin/status/2124866686025400819",
+      "https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/",
+      "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit"
+    ],
     "2026-11-23": [
       "https://x.com/OpenBMB/status/2124464239670964531",
       "https://openai.com/index/perplexity-and-intelligence",
