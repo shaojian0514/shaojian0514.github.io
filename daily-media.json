@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T00:09:42.139935+00:00",
+  "updatedAt": "2026-11-25T08:56:50.254261+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -417,9 +417,43 @@
     "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit": {
       "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/06/STK419_DEEPFAKE_CVIRGINIA_F.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
       "source": "https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit"
+    },
+    "https://cognition.com/blog/swe-2-1": {
+      "image": "https://cognition.com/images/swe-2-1/cover.jpg",
+      "source": "https://cognition.com/blog/swe-2-1"
+    },
+    "https://claude.com/blog/install-as-app": {
+      "image": "https://claude.com/resources/articles/install-as-app/opengraph-image/og",
+      "source": "https://claude.com/blog/install-as-app"
+    },
+    "https://claude.com/blog/skills-over-mcp-tasks-and-more": {
+      "image": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more/opengraph-image/og",
+      "source": "https://claude.com/blog/skills-over-mcp-tasks-and-more"
+    },
+    "https://www.chinatalk.media/p/jensen-returns": {
+      "image": "https://substackcdn.com/image/fetch/$s_!A8G6!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F052b26fb-d743-420e-ab44-126339d9ab0b_2560x1706.jpeg",
+      "source": "https://www.chinatalk.media/p/jensen-returns"
+    },
+    "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/": {
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/cairn-banner.jpg",
+      "source": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/"
+    },
+    "https://www.chinatalk.media/p/the-remote-access-rule-will-slow": {
+      "image": "https://substackcdn.com/image/fetch/$s_!iH_y!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe0325f1d-2b18-4662-b359-8513bdd11b30_960x640.png",
+      "source": "https://www.chinatalk.media/p/the-remote-access-rule-will-slow"
     }
   },
   "dates": {
+    "2026-11-25": [
+      "https://cognition.com/blog/swe-2-1",
+      "https://claude.com/blog/install-as-app",
+      "https://claude.com/blog/skills-over-mcp-tasks-and-more",
+      "https://x.com/thsottiaux/status/2125141302501417232",
+      "https://mp.weixin.qq.com/s/Maoz76fZdGNaB7tlIVxWWQ",
+      "https://www.chinatalk.media/p/jensen-returns",
+      "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+      "https://www.chinatalk.media/p/the-remote-access-rule-will-slow"
+    ],
     "2026-11-24": [
       "https://mp.weixin.qq.com/s/D-IZr-QaT1or_chminK8IQ",
       "https://claude.com/blog/introducing-claude-ship",
