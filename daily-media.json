@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-25T08:56:50.254261+00:00",
+  "updatedAt": "2026-11-26T08:42:21.550987+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -441,9 +441,35 @@
     "https://www.chinatalk.media/p/the-remote-access-rule-will-slow": {
       "image": "https://substackcdn.com/image/fetch/$s_!iH_y!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe0325f1d-2b18-4662-b359-8513bdd11b30_960x640.png",
       "source": "https://www.chinatalk.media/p/the-remote-access-rule-will-slow"
+    },
+    "https://fireworks.ai/blog/hy4-flash-on-fireworks/": {
+      "image": "https://cdn.sanity.io/images/pv37i0yn/horizon/f17d89cddc8121fb25eec99646dc89bcae6abad8-1600x900.png?v=2026-11-25T22%3A21%3A03Z",
+      "source": "https://fireworks.ai/blog/hy4-flash-on-fireworks/"
+    },
+    "https://pydantic.dev/articles/pax-harness-beta": {
+      "image": "https://pydantic.dev/articles/pax-harness-beta/og.png",
+      "source": "https://pydantic.dev/articles/pax-harness-beta"
+    },
+    "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2024/06/Character-Calls-Image-feat.jpg?resize=1200,675",
+      "source": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/"
+    },
+    "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/": {
+      "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2249127237.jpg?resize=1200,800",
+      "source": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/"
     }
   },
   "dates": {
+    "2026-11-26": [
+      "https://mp.weixin.qq.com/s/JkZM9s6tC_Wz5MKeYcccxw",
+      "https://fireworks.ai/blog/hy4-flash-on-fireworks/",
+      "https://mp.weixin.qq.com/s/jZumD5cprhI7bgmOI7mUEw",
+      "https://pydantic.dev/articles/pax-harness-beta",
+      "https://x.com/openclaw/status/2125591827600531554",
+      "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
+      "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/",
+      "https://x.com/gdb/status/2125418102049628201"
+    ],
     "2026-11-25": [
       "https://cognition.com/blog/swe-2-1",
       "https://claude.com/blog/install-as-app",
