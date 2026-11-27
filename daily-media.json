@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-26T08:42:21.550987+00:00",
+  "updatedAt": "2026-11-27T08:53:20.866152+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -457,9 +457,31 @@
     "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/": {
       "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2249127237.jpg?resize=1200,800",
       "source": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/"
+    },
+    "https://huggingface.co/inclusionAI/Ming-Image-0.2-Design": {
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/inclusionAI/Ming-Image-0.2-Design.png",
+      "source": "https://huggingface.co/inclusionAI/Ming-Image-0.2-Design"
+    },
+    "https://calif.io/research/oempocalypse-part-2": {
+      "image": "https://calif.io/og/oempocalypse-part-2.jpg",
+      "source": "https://calif.io/research/oempocalypse-part-2"
+    },
+    "https://calif.io/research/tortilla-with-onion": {
+      "image": "https://calif.io/og/tortilla-with-onion.jpg",
+      "source": "https://calif.io/research/tortilla-with-onion"
     }
   },
   "dates": {
+    "2026-11-27": [
+      "https://huggingface.co/inclusionAI/Ming-Image-0.2-Design",
+      "https://x.com/gdb/status/2125824585027272727",
+      "https://x.com/rohanpaul_ai/status/2125847124600656142",
+      "https://calif.io/research/oempocalypse-part-2",
+      "https://calif.io/research/tortilla-with-onion",
+      "https://x.com/elonmusk/status/2125669066388209784",
+      "https://x.com/adocomplete/status/2125994186252161315",
+      "https://mp.weixin.qq.com/s/d-MoIMsMdxtR9qw3dn-8sg"
+    ],
     "2026-11-26": [
       "https://mp.weixin.qq.com/s/JkZM9s6tC_Wz5MKeYcccxw",
       "https://fireworks.ai/blog/hy4-flash-on-fireworks/",
