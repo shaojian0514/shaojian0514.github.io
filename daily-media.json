@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T08:53:20.866152+00:00",
+  "updatedAt": "2026-11-28T08:14:02.935704+00:00",
   "images": {
     "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/": {
       "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
@@ -472,6 +472,11 @@
     }
   },
   "dates": {
+    "2026-11-28": [
+      "https://x.com/OpenBMB/status/2126308118741323853",
+      "https://mp.weixin.qq.com/s/x7Yt237NPL-sLvkUJlwESw",
+      "https://x.com/Khazix0918/status/2126294658431201385"
+    ],
     "2026-11-27": [
       "https://huggingface.co/inclusionAI/Ming-Image-0.2-Design",
       "https://x.com/gdb/status/2125824585027272727",
